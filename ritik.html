@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page</title>
+
+<!-- 🔥 FACEBOOK PIXEL (PUT YOUR ID) -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', 'YOUR_PIXEL_ID'); 
+fbq('track', 'PageView');
+</script>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: white;
+  text-align: center;
+}
+
+/* Background */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  background: url('https://d1yei2z3i6k35z.cloudfront.net/9546101/6868d711cf40f_b69f783b659552f6335070bcba1f858c.jpg') no-repeat center/cover;
+}
+
+/* Title */
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Image */
+img {
+  width: 200px;
+  border-radius: 30px;
+  border: 3px solid white;
+  margin: 20px auto;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 15px 40px;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  background: #0088cc;
+  margin: 20px 0;
+  transition: 0.3s;
+}
+
+/* Timer */
+#timer {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+/* Features */
+.features {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+@media(max-width:600px){
+  h1 { font-size: 22px; }
+  img { width: 150px; }
+  .btn { font-size: 18px; padding: 12px 30px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>𝐇𝐀𝐂𝐊𝐄𝐑 𝐊𝐈𝐍𝐆 𝐍𝐔𝐌𝐁𝐄𝐑 (𝐏𝐑𝐄𝐃𝐈𝐂𝐓𝐈𝐎𝐍 𝐒𝐔𝐑𝐄𝐒𝐇𝐎𝐓)</h1>
+
+<img src="YOUR_IMAGE_LINK_HERE">
+
+<a href="YOUR_TELEGRAM_LINK" target="_blank" class="btn" id="btn">
+JOIN TELEGRAM
+</a>
+
+<div id="timer">5</div>
+
+<div class="features">
+✅ Regular color updates<br>
+✅ Fast notification alerts<br>
+✅ Easy-to-understand format<br>
+✅ Active & growing community
+</div>
+
+<div class="footer">
+7 YEARS EXPERIENCES
+</div>
+
+</div>
+
+<script>
+// 🔥 Button color animation
+const btn = document.getElementById("btn");
+const colors = ['#0088cc', '#ff5733', '#28a745', '#6f42c1', '#e83e8c'];
+let i = 0;
+
+setInterval(() => {
+  i = (i + 1) % colors.length;
+  btn.style.backgroundColor = colors[i];
+}, 1500);
+
+// ⏳ 5 SECOND TIMER
+let timeLeft = 5;
+const timer = document.getElementById("timer");
+
+const countdown = setInterval(() => {
+  timeLeft--;
+  timer.innerText = timeLeft;
+
+  if (timeLeft <= 0) {
+    clearInterval(countdown);
+    window.location.href = "YOUR_TELEGRAM_LINK"; // redirect
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
